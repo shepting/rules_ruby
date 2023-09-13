@@ -76,13 +76,13 @@ def runfiles_envvar(runfiles)
 
   # Look for the runfiles "output" manifest, argv[0] + ".runfiles_manifest"
   manifest = runfiles + '_manifest'
-  if File.exists?(manifest)
+  if File.exist?(manifest)
     return ['RUNFILES_MANIFEST_FILE', manifest]
   end
 
   # Look for the runfiles "input" manifest, argv[0] + ".runfiles/MANIFEST"
   manifest = File.join(runfiles, 'MANIFEST')
-  if File.exists?(manifest)
+  if File.exist?(manifest)
     return ['RUNFILES_DIR', manifest]
   end
 
